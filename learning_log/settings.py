@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-m)g$fwnf6e6#t1_)+cnn3=*%=%+wy1_5$v&wwm%vtm2m230j&o
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost', 'https://learning-journal-app.onrender.com']
 
 
 # Application definition
