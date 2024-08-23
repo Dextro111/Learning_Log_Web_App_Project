@@ -12,19 +12,12 @@
         {% bootstrap_css %}
         {% bootstrap_javascript %}
 
-        <style type="text/css">
-            body {
-                background-color: burlywood;
-            }
-            
-        </style>
-
     </head>
 
-    <body>
+    <body style="background-color: burlywood;">
 
         <!-- Static Navbar -->
-        <nav class="navbar navbar-default navbar-static-top">
+        <nav class="navbar navbar-default navbar-static-top" style="background-color:black; font-family: Impact; font-size:larger;">
             <div class="container">
 
                 <div class="navbar-header">
@@ -32,23 +25,23 @@
                     data-toggle="collapse" data-target="#navbar"
                     aria-expanded="false" aria-controls="navbar">
                 </button>
-                <a class="navbar-brand" href="{% url 'learning_logs:index' %}">
+                <a class="navbar-brand" href="{% url 'learning_logs:index' %}" style="color:white ;">
                     LEARNING LOG
                 </a>
                 </div>
 
                 <div id="navbar" class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
-                        <li><a href="{% url 'learning_logs:topics' %}">TOPICS</a></li>
+                        <li><a href="{% url 'learning_logs:topics' %}" style="color: white;">TOPICS</a></li>
                     </ul>
 
                     <ul class="nav navbar-nav navbar-right">
                         {% if user.is_authenticated %}
-                            <li><a>HELLO, {{ user.username }}.</a></li>
-                            <li><a href="{% url 'users:logout' %}">LOG OUT</a></li>
+                            <li><a style="color: white;">HELLO, {{ user.username }}.</a></li>
+                            <li><a href="{% url 'users:logout' %}" style="color: white;">LOG OUT</a></li>
                         {% else %}
-                            <li><a href="{% url 'users:register' %}">REGISTER</a></li>
-                            <li><a href="{% url 'users:login' %}">LOG IN</a></li>
+                            <li><a href="{% url 'users:register' %}" style="color: white;">REGISTER</a></li>
+                            <li><a href="{% url 'users:login' %}" style="color: white;">LOG IN</a></li>
                         {% endif %}
                     </ul>
                 </div><!--/.nav-collapse -->
@@ -56,12 +49,12 @@
             </div>
         </nav> 
 
-        <div class="container">
+        <div class="container" style="color: black;">
 
-            <div class="page-header">
+            <div class="page-header" style="color: black;">
                 {% block header %}{% endblock header %}
             </div>
-            <div>
+            <div style="color: black;">
                 {% block content %}{% endblock content %}
             </div>
         </div> <!--/container-->
