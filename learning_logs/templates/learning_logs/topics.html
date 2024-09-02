@@ -1,23 +1,23 @@
 {%  extends "learning_logs/base.html" %}
 
 {% block header %}
-    <h2>Topics!</h2>
+    <h1 style="font-weight: bold; font-family: Georgia, 'Times New Roman';">TOPICS</h1>
 {% endblock header %}
 
 {% block content %}
 
-<ul>
+<ul style="margin: 0; padding: 0; background-color: wheat; border-style: double; border-width: 6px;">
     {% for topic in topics %}
-    <li>
-        <h4>
-        <a href="{% url 'learning_logs:topic' topic.id %}">{{ topic }}</a>
-        </h4>
+    <li style="display: block;">
+        <h2 style="font-family: 'Franklin Gothic Medium';">
+        <a href="{% url 'learning_logs:topic' topic.id %}" style="color:black; text-decoration: none;" onmouseover="this.style.color='#00007B'" onmouseout="this.style.color='#000'">{{ topic }}</a>
+        </h2>
     </li>
     {% empty %}
-    <li>No topics have been added yet.</li>
+    <li style="display: block;"><h2 style="font-family: 'Franklin Gothic Medium';">No Topics Have Been Added Yet...</h2></li>
     {% endfor %}
 </ul>
 
-<h3><a href="{% url 'learning_logs:new_topic' %}">Add A New Topic:</a></h3>
+<h2 style="font-family: 'Franklin Gothic Medium';"><a href="{% url 'learning_logs:new_topic' %}" style="color:darkred; text-decoration: none;" onmouseover="this.style.color='white'" onmouseout="this.style.color='#8b0000'">Add A New Topic?</a></h2>
 
 {% endblock content %}

@@ -1,16 +1,16 @@
 {%  extends "learning_logs/base.html"   %}
 
 {% block header %}
-    <div class="jumbotron">
-        <h2>TRACK YOUR LEARNING.</h2>
+    <div class="jumbotron" style="border-style: double; border-radius:20px; border-width: 7px; border-color:black; background-color:darkgrey;" >
+        <h2 style="font-family:Verdana, Geneva; font-weight:bold; font-size: xx-large; color:black;">TRACK YOUR LEARNING...</h2>
     </div>
 {% endblock header %}
 
 {% block content %}
-    <h3>
-        <a href="{% url 'users:register' %}">REGISTER AN ACCOUNT</a> To Make Your Own Learning Log, And List The Topics You're Learning About.
+    <h3 style="font-family: Verdana, Geneva, Tahoma; font-size: 30px;" >
+        <a href="{% url 'users:register' %}" style="color: darkslategrey;">REGISTER AN ACCOUNT</a> To Make Your Own Learning Log, And List The Topics You're Learning About.
     </h3>
-    <h3>
+    <h3 style="font-family: Verdana, Geneva, Tahoma; font-size:30px;">
         Whenever You Learn Something New About A Topic, Make An Entry Summarizing What You've Learned.
     </h3>
 {%  endblock content  %}
