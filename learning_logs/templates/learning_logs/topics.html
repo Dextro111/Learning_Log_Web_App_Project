@@ -10,8 +10,6 @@
     {% for topic in topics %}
     <li style="display: block;">
         <h2 style="font-family: 'Franklin Gothic Medium';">
-        <a href="{% url 'learning_logs:topic' topic.id %}" style="color:black; text-decoration: none;" onmouseover="this.style.color='#00007B'" onmouseout="this.style.color='#000'">{{ topic }}</a>
-        </h2>
     </li>
     {% empty %}
     <li style="display: block;"><h2 style="font-family: 'Franklin Gothic Medium';">No Topics Have Been Added Yet...</h2></li>
